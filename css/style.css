@@ -1,0 +1,380 @@
+/* ==============================
+   ESTILO GERAL
+============================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: #fff;
+}
+
+/* ==============================
+   CABEÇALHO
+============================== */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  color: #e50914;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav li:hover {
+  color: #e50914;
+}
+
+/* ==============================
+   SEÇÃO TOP 10
+============================== */
+.top10-horizontal {
+  padding: 40px 20px;
+  background-color: #1c1c1c;
+}
+
+.top10-horizontal h2 {
+  color: #e50914;
+  margin-bottom: 20px;
+}
+
+.top10-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.top10-list .item {
+  position: relative;
+  width: 150px;
+  flex-shrink: 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.top10-list .item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.top10-list .item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.top10-list .item .rank {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #e50914;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4px 8px;
+  border-radius: 5px;
+  z-index: 1;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* ==============================
+   CARROSSEL DE CATEGORIAS
+============================== */
+.carrossel {
+  padding: 20px;
+}
+
+.carrossel h2 {
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+.carrossel .livros {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.carrossel img {
+  width: 150px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.carrossel img:hover {
+  transform: translateY(-10px) scale(1.05) rotateX(5deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ==============================
+   MODAL (ESTILO NETFLIX)
+============================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: #1c1c1c;
+  margin: 5% auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.4s ease;
+  max-height: 90vh; /* permite rolar se o conteúdo for maior */
+  overflow-y: auto;
+}
+
+.modal-content h2,
+.modal-content h3 {
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.modal-content p {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.modal-content button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(229, 9, 20, 0.5);
+}
+
+.fechar {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ==============================
+   HISTÓRIA / CONTEÚDO DO LIVRO
+============================== */
+.livro-com-capa {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.capa-lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteudo-livro {
+  flex: 1;
+  overflow: hidden;
+}
+
+.conteudo-livro h2 {
+  margin-top: 0;
+  color: #e50914;
+}
+
+.texto-historia {
+  max-height: 60vh; /* permite rolagem dentro do modal */
+  overflow-y: auto;
+  margin-top: 15px;
+  padding: 20px;
+  line-height: 1.8;
+  font-size: 16px;
+  font-family: 'Georgia', serif;
+  color: #f2f2f2;
+  background-color: #000;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.texto-historia p {
+  margin-bottom: 16px;
+}
+
+.texto-historia::-webkit-scrollbar {
+  width: 6px;
+}
+
+.texto-historia::-webkit-scrollbar-thumb {
+  background-color: #e50914;
+  border-radius: 3px;
+}
+
+/* ==============================
+   CONTROLES DE ZOOM
+============================== */
+.zoom-controles {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.zoom-controles button {
+  background-color: #000;
+  color: #e50914;
+  border: 1px solid #e50914;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.zoom-controles button:hover {
+  background-color: #e50914;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ==============================
+   EFEITO DE RESPIRO VERMELHO NA CAPA
+============================== */
+.capa-com-aura {
+  position: relative;
+}
+
+.capa-com-aura img {
+  display: block;
+  width: 180px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  animation: respirarVermelho 4s ease-in-out infinite;
+}
+
+.capa-com-aura::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* ==============================
+   RODAPÉ
+============================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  font-size: 14px;
+}
+
+/* ==============================
+   ANIMAÇÕES
+============================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes respirarVermelho {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.3), 0 0 24px rgba(255, 0, 0, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.25);
+    transform: scale(1.01);
+  }
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+@media (max-width: 768px) {
+  .livro-com-capa {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .texto-historia {
+    max-height: 50vh;
+  }
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #222;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  color: #fff;
+  border-radius: 8px;
+}
