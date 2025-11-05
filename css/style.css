@@ -374,3 +374,47 @@ footer {
   color: #fff;
   border-radius: 8px;
 }
+
+
+/* ==== Itens das seções (como Top 10, romance, etc) ==== */
+.item {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+/* ==== Imagens das capas ==== */
+.item img {
+  width: 180px;        /* define o tamanho padrão */
+  height: 260px;       /* mantém proporção similar a uma capa de livro */
+  object-fit: cover;   /* evita distorção */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* ==== Ranking (os números no canto) ==== */
+.item .rank {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #d40000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.item img {
+  width: 180px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
