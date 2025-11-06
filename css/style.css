@@ -155,7 +155,7 @@ nav li:hover {
   box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
   animation: fadeIn 0.4s ease;
   max-height: 90vh; /* permite rolar se o conteúdo for maior */
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .modal-content h2,
@@ -213,6 +213,7 @@ nav li:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .conteudo-livro {
@@ -225,18 +226,26 @@ nav li:hover {
   color: #ffffff;
 }
 
+.conteudo-livro::-webkit-scrollbar-thumb {
+  background: #e50914; /* vermelho Netflix */
+  border-radius: 4px;
+}
+.conteudo-livro::-webkit-scrollbar-track {
+  background: #330000; /* fundo escuro */
+}
+
 .texto-historia {
-  max-height: 60vh; /* permite rolagem dentro do modal */
+  max-height: 60vh;
   overflow-y: auto;
   margin-top: 15px;
   padding: 20px;
-  line-height: 1.8;
+  line-height: 1.9;
   font-size: 16px;
   font-family: 'Georgia', serif;
   color: #f2f2f2;
-  background-color: #000;
-  border-radius: 8px;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+  background-color: black;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .texto-historia p {
@@ -244,12 +253,16 @@ nav li:hover {
 }
 
 .texto-historia::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 .texto-historia::-webkit-scrollbar-thumb {
   background-color: #e50914;
-  border-radius: 3px;
+  border-radius: 4px;
+}
+
+.texto-historia::-webkit-scrollbar-track {
+  background: #330000; /* fundo escuro */
 }
 
 /* ==============================
@@ -344,11 +357,6 @@ footer {
     align-items: center;
   }
 
-  .modal-content {
-    width: 90%;
-    padding: 20px;
-  }
-
   .texto-historia {
     max-height: 50vh;
   }
@@ -365,16 +373,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
-
-.modal-content {
-  background-color: #222;
-  margin: 10% auto;
-  padding: 20px;
-  width: 80%;
-  color: #fff;
-  border-radius: 8px;
-}
-
 
 /* ==== Itens das seções (como Top 10, romance, etc) ==== */
 .item {
@@ -417,4 +415,12 @@ footer {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.botoes-laterais {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }

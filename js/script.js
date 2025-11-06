@@ -22,7 +22,7 @@ fetch('components/classe-rpg.html')
     document.getElementById('rpg-container').innerHTML = html;
   });
 
-fetch('components/modal-kaelira.html')
+fetch('components/stories/modal-kaelira.html')
   .then(res => res.text())
   .then(html => {
     document.getElementById('modal-container').innerHTML = html;

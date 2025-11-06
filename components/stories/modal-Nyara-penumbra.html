@@ -1,6 +1,7 @@
 <div id="modalNyaraPenumbra" class="modal">
   <div class="modal-content livro-com-capa">
-   <span class="fechar" onclick="fecharModal('NyaraPenumbra')">&times;</span> 
+    <span class="fechar" onclick="fecharModal('NyaraPenumbra')">&times;</span> 
+    
     <div class="capa-lateral">
       <div class="capa-com-aura">
         <img src="assets/NyaraPenumbra.png" alt="Capa de Nyara Penumbra" />
@@ -10,19 +11,24 @@
         <button onclick="aumentarZoom()">🔍 +</button>
         <button onclick="diminuirZoom()">🔍 −</button>
       </div>
+
+      <!-- ✅ Botão movido para dentro da capa-lateral -->
+      <div class="botoes-laterais">
+        <button onclick="mostrarCapitulo(2)">Ler próximo capítulo</button>
+      </div>
     </div>
 
     <div class="conteudo-livro">
       <h2>Nyara Penumbra</h2>
-      <h3>📖 Capítulo 1: Ecos da Floresta Sombria</h3>
-      <div class="texto-historia">
-        <p>Nyara cresceu entre as raízes retorcidas da Floresta Sombria, onde os ventos sussurravam segredos antigos e os animais pareciam guardar memórias esquecidas.</p>
-        <p>Filha de uma curandeira e um caçador exilado, ela aprendeu desde cedo a ouvir o silêncio e decifrar os sinais da natureza. Seu dom de comunicação com os espíritos da floresta a tornou alvo de medo e reverência.</p>
-        <p>Quando a floresta começou a morrer, Nyara foi convocada por forças ancestrais para restaurar o equilíbrio — enfrentando criaturas corrompidas, segredos enterrados e sua própria linhagem amaldiçoada.</p>
-      </div>
 
-      <button>Ler próximo capítulo</button>
-      <button>Adicionar aos favoritos</button>
+      <!-- ================= CAPÍTULO 1 ================= -->
+      <h3>📖 Capítulo I: O Eclipse dos Ventos</h3>
+<div class="texto-historia">
+  <p>Nyara nasceu durante o Eclipse dos Ventos, um fenômeno raro em que os céus se tingem de roxo e os espíritos da floresta sussurram aos recém-nascidos. Filha de duas linhagens poderosas — sua mãe, uma sacerdotisa das correntes aéreas, e seu pai, um guerreiro alado exilado — Nyara foi criada entre raízes e nuvens, aprendendo a ouvir o vento antes mesmo de falar.</p>
+
+  <p>Desde pequena, ela demonstrava habilidades incomuns: suas penas podiam cortar madeira, seus olhos enxergavam através da mentira, e sua voz, quando cantava, fazia as folhas dançarem. Mas com dons tão raros vinham responsabilidades pesadas. A tribo dos alados a via como uma arma contra o Império de Virell, que avançava pelas florestas com máquinas e magia corrompida.</p>
+</div>
+
     </div>
   </div>
 </div>
