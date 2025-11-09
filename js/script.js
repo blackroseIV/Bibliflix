@@ -44,3 +44,23 @@ window.addEventListener("DOMContentLoaded", async () => {
   await carregarComponente("modal-container", "components/stories/modal-Nyara-penumbra.html", true);
   console.log("📚 Todos os modais foram carregados com sucesso!");
 });
+
+
+function mudarCapitulo(personagem, direcao) {
+  const capitulos = document.querySelectorAll(`#modal${personagem} .capitulo`);
+  let indiceAtual = Array.from(capitulos).findIndex(c => !c.classList.contains('oculto'));
+
+  // Se nenhum estiver visível, mostrar o primeiro
+  if (indiceAtual === -1) indiceAtual = 0;
+
+  // Esconde o atual
+  capitulos[indiceAtual].classList.add('oculto');
+
+  // Calcula o próximo
+  let proximo = indiceAtual + direcao;
+  if (proximo < 0) proximo = capitulos.length - 1;
+  if (proximo >= capitulos.length) proximo = 0;
+
+  // Mostra o novo
+  capitulos[proximo].classList.remove('oculto');
+}

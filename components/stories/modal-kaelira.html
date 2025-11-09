@@ -1,54 +1,145 @@
 <div id="modalKaelira" class="modal">
-  <div class="modal-content livro-com-capa">
+  <div class="modal-content livro-com-capa kaelira-theme">
     <!-- Botão de Fechar -->
     <span class="fechar" onclick="fecharModal('Kaelira')">&times;</span>
 
-    <!-- Lado Esquerdo: Capa e Controles -->
+    <!-- ====================== LADO ESQUERDO ====================== -->
     <div class="capa-lateral">
       <div class="capa-com-aura">
-        <img src="assets/Kaelira.png" alt="Capa de Kaelira Sangue-Rubro" />
+        <img id="imgKaelira" src="assets/Kaelira.png" alt="Capa de Kaelira Sangue-Rubro" />
       </div>
 
-    <div class="zoom-controles">
-      <button onclick="aumentarZoom('Kaelira')">🔍 +</button>
-      <button onclick="diminuirZoom('Kaelira')">🔍 −</button>
+      <div class="zoom-controles">
+        <button onclick="aumentarZoom('Kaelira')">🔍 +</button>
+        <button onclick="diminuirZoom('Kaelira')">🔍 −</button>
+      </div>
+
+      <div class="abas">
+        <button class="aba ativa" onclick="mostrarAba('Kaelira','ficha')">Ficha</button>
+        <button class="aba" onclick="mostrarAba('Kaelira','livro')">Livro</button>
+      </div>
     </div>
 
-
-      <button onclick="mostrarCapitulo(2)">Ler próximo capítulo</button>
-    </div>
-
-    <!-- Lado Direito: Conteúdo do Livro -->
+    <!-- ====================== LADO DIREITO ====================== -->
     <div class="conteudo-livro">
-      <h2>Kaelira Sangue-Rubro</h2>
 
-      <!-- ================= CAPÍTULO 1 ================= -->
-      <div class="capitulo" id="capitulo1">
-        <h3>Capítulo I: A Rosa Entre Espinhos</h3>
+      <!-- ======== ABA: FICHA ======== -->
+      <div class="aba-conteudo" id="Kaelira-ficha">
+        <h2>⚔️ Kaelira Sangue-Rubro</h2>
         <div class="texto-historia">
           <p>
-            Kaelira nasceu sob o véu da noite, em uma mansão silenciosa no
-            coração do Império de Virell — uma nação onde o poder era conquistado
-            não apenas com espadas, mas com sussurros e punhais escondidos.
+            Kaelira é uma assassina lendária do Império de Virell, conhecida por sua precisão
+            e pela marca carmesim que deixa em cada missão concluída.
+            Treinada desde a infância pela ordem secreta das Lâminas de Virell,
+            ela aprendeu a transformar dor em disciplina e medo em poder.
           </p>
+          <ul>
+            <li><strong>Nome:</strong> Kaelira Altharion</li>
+            <li><strong>Idade:</strong> 24 anos</li>
+            <li><strong>Origem:</strong> Império de Virell</li>
+            <li><strong>Ocupação:</strong> Assassina da Ordem das Lâminas</li>
+            <li><strong>Habilidade principal:</strong> Manipulação de sombras</li>
+            <li><strong>Arma:</strong> Duas adagas de prata vermelha — "Sangue" e "Silêncio"</li>
+          </ul>
           <p>
-            Filha bastarda do Duque Altharion, um dos homens mais influentes da
-            corte, Kaelira cresceu longe dos salões dourados da nobreza. Sua mãe,
-            uma cortesã de beleza lendária e língua afiada, foi assassinada quando
-            Kaelira tinha apenas seis anos. O crime nunca foi investigado. O
-            silêncio foi comprado com moedas de ouro e promessas vazias.
-          </p>
-          <p>
-            Órfã e marcada pelo sangue, Kaelira foi entregue a uma ordem secreta
-            conhecida como As Lâminas de Virell, um culto de assassinos que
-            servia à elite do império. Lá, ela aprendeu a transformar dor em
-            disciplina, medo em foco, e ódio em precisão. Enquanto outras crianças
-            brincavam, Kaelira treinava com adagas, escalava paredes de pedra e
-            aprendia a matar sem ser vista.
+            Seu nome é sussurrado entre os nobres e temido entre os traidores.
+            Ninguém a viu e viveu para contar a história — ou quase ninguém.
           </p>
         </div>
       </div>
-      <!-- Fim do Capítulo 1 -->
-    </div>
-  </div>
-</div>
+
+      <!-- ======== ABA: LIVRO ======== -->
+      <div class="aba-conteudo oculto" id="Kaelira-livro">
+        <h2>📖 Livro: Kaelira — Sangue-Rubro</h2>
+
+        <!-- ================= CAPÍTULO 1 ================= -->
+        <div class="capitulo" id="Kaelira-capitulo-1">
+          <h3>I. A Rosa Entre Espinhos</h3>
+          <div class="texto-historia">
+            <p>
+              Kaelira nasceu sob o véu da noite, em uma mansão silenciosa no coração do Império de Virell — uma nação onde o poder era conquistado não apenas com espadas, mas com sussurros e punhais escondidos.
+            </p>
+            <p>
+              Filha bastarda do Duque Altharion, um dos homens mais influentes da corte, Kaelira cresceu longe dos salões dourados da nobreza. Sua mãe, uma cortesã de beleza lendária e língua afiada, foi assassinada quando Kaelira tinha apenas seis anos. O crime nunca foi investigado. O silêncio foi comprado com moedas de ouro e promessas vazias.
+            </p>
+            <p>
+              Órfã e marcada pelo sangue, Kaelira foi entregue a uma ordem secreta conhecida como <strong>As Lâminas de Virell</strong>, um culto de assassinos que servia à elite do império. Lá, ela aprendeu a transformar dor em disciplina, medo em foco e ódio em precisão. Enquanto outras crianças brincavam, Kaelira treinava com adagas, escalava paredes de pedra e aprendia a matar sem ser vista.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 2 ================= -->
+        <div class="capitulo oculto" id="Kaelira-capitulo-2">
+          <h3>II. A Dança da Lâmina</h3>
+          <div class="texto-historia">
+            <p>
+              Aos 16 anos, Kaelira realizou sua primeira execução: um magistrado corrupto que vendia sentenças ao maior lance. Ela entrou em sua mansão durante um baile, disfarçada de serva, e o matou com um corte limpo na garganta enquanto ele dançava com sua esposa. Ninguém viu. Ninguém ouviu. Apenas o sangue no chão contou a história.
+            </p>
+            <p>
+              A fama de Kaelira cresceu entre os nobres como uma lenda sussurrada. Diziam que ela era um espectro de cabelos vermelhos, uma sombra que dançava com a morte. Mas por trás da máscara de perfeição, Kaelira guardava uma ferida aberta: a verdade sobre a morte de sua mãe.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 3 ================= -->
+        <div class="capitulo oculto" id="Kaelira-capitulo-3">
+          <h3>III. O Preço da Verdade</h3>
+          <div class="texto-historia">
+            <p>
+              Durante uma missão para eliminar um traidor da coroa, Kaelira descobriu documentos secretos que revelavam o nome do mandante do assassinato de sua mãe: o próprio Duque Altharion, seu pai biológico. Ele temia que a existência da filha bastarda manchasse sua reputação e ameaçasse sua linhagem legítima.
+            </p>
+            <p>
+              Consumida pela fúria, Kaelira quebrou o juramento à ordem e desapareceu. Durante anos, vagou pelas sombras do império, caçando aliados do duque, desmantelando sua rede de poder, e espalhando o caos entre os nobres. Cada morte era uma pétala arrancada da rosa pútrida da aristocracia.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 4 ================= -->
+        <div class="capitulo oculto" id="Kaelira-capitulo-4">
+          <h3>IV. A Rosa Negra Floresce</h3>
+          <div class="texto-historia">
+            <p>
+              Kaelira tornou-se uma lenda viva. Mercenários, rebeldes e até reis começaram a procurá-la, não como inimiga, mas como aliada. Ela fundou sua própria guilda de assassinos: A Rosa Negra, um grupo que aceitava contratos apenas contra tiranos, corruptos e traidores. Seus métodos eram brutais, mas sua causa era justa — aos olhos dos oprimidos, ela era uma heroína.
+            </p>
+            <p>
+              Mas o império não esquece. O novo imperador, temendo o poder crescente da Rosa Negra, declarou Kaelira inimiga do Estado. Caçadores de recompensas, inquisidores e até antigos aliados foram enviados para destruí-la.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 5 ================= -->
+        <div class="capitulo oculto" id="Kaelira-capitulo-5">
+          <h3>V. O Último Corte</h3>
+          <div class="texto-historia">
+            <p>
+              A guerra nas sombras culminou em um confronto épico no coração de Virell. Kaelira, agora com 28 anos, invadiu o palácio imperial durante o Festival da Lua Rubra. Sozinha, enfrentou dezenas de guardas, atravessou salões banhados em ouro e confrontou o velho Duque Altharion em seus aposentos.
+            </p>
+            <p>
+              Ele implorou por perdão. Disse que a matou por amor — amor ao império, à ordem, à estabilidade. Kaelira não respondeu. Apenas lançou sua adaga. O silêncio que se seguiu foi mais eloquente que qualquer palavra.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= EPÍLOGO ================= -->
+        <div class="capitulo oculto" id="Kaelira-epilogo">
+          <h3>Epílogo: Lenda ou Maldição?</h3>
+          <div class="texto-historia">
+            <p>
+              Dizem que Kaelira desapareceu após aquela noite. Alguns afirmam que ela morreu, outros que vive entre os plebeus, protegendo os inocentes. Há quem jure tê-la visto nas sombras de reinos distantes, ainda com os cabelos vermelhos como sangue e olhos que enxergam a verdade por trás das máscaras.
+            </p>
+            <p>
+              Mas uma coisa é certa: onde há opressão, onde a justiça é comprada e a verdade silenciada, a Rosa Negra florescerá novamente.
+            </p>
+          </div>
+        </div>
+
+        <!-- ======== CONTROLES DE CAPÍTULOS ======== -->
+        <div class="controle-capitulos">
+          <button onclick="mudarCapitulo('Kaelira', -1)">⬅️ Anterior</button>
+          <button onclick="mudarCapitulo('Kaelira', 1)">Próximo ➡️</button>
+        </div>
+      </div> <!-- Fim da aba livro -->
+
+    </div> <!-- Fim do conteúdo-livro -->
+  </div> <!-- Fim do modal-content -->
+</div> <!-- Fim do modal -->
