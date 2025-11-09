@@ -9,39 +9,47 @@ body {
 }
 
 /* ==============================
-   CABEÇALHO
+   CABEÇALHO / TOPO DO SITE
 ============================== */
-header {
-  background-color: rgb(0, 0, 0);
-  padding: 20px;
+header, .topo-site {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 10px rgb(255, 0, 0);
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
 }
 
-header h1 {
+header h1, .logo {
   color: #e50914;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin: 0;
 }
 
-nav ul {
+nav ul, .menu-principal ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
-nav li {
+nav li, .menu-principal a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
   cursor: pointer;
   transition: color 0.3s;
 }
 
-nav li:hover {
+nav li:hover, .menu-principal a:hover {
   color: #e50914;
 }
 
@@ -49,54 +57,74 @@ nav li:hover {
    SEÇÃO TOP 10
 ============================== */
 .top10-horizontal {
-  padding: 40px 20px;
+  padding: 2rem;
+  color: #fff;
   background-color: #1c1c1c;
 }
 
 .top10-horizontal h2 {
-  color: #ffffff;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .top10-list {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
   overflow-x: auto;
-  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.top10-list::-webkit-scrollbar {
+  height: 8px;
+}
+.top10-list::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
 }
 
 .top10-list .item {
   position: relative;
-  width: 150px;
-  flex-shrink: 0;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
+  width: 180px;
+  height: 260px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .top10-list .item:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 25px rgba(255, 0, 0, 0.514);
+  transform: scale(1.08);
+  box-shadow: 0 15px 25px rgba(255, 0, 0, 0.5);
 }
 
 .top10-list .item img {
   width: 100%;
-  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
 
-.top10-list .item .rank {
+.top10-list .rank {
   position: absolute;
-  top: 5px;
-  left: 5px;
-  font-size: 36px;
+  top: 5px; /* antes -10px */
+  left: 5px; /* antes -10px */
+  background: #e50914;
+  color: #fff;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #ffffff;
-  background-color: rgb(0, 0, 0);
-  padding: 4px 8px;
-  border-radius: 5px;
-  z-index: 1;
-  text-shadow: 1px 1px 2px #000;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  z-index: 10;
 }
+
 
 /* ==============================
    CARROSSEL DE CATEGORIAS
@@ -106,8 +134,9 @@ nav li:hover {
 }
 
 .carrossel h2 {
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .carrossel .livros {
@@ -136,8 +165,7 @@ nav li:hover {
   display: none;
   position: fixed;
   z-index: 2000;
-  left: 0;
-  top: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
@@ -154,24 +182,13 @@ nav li:hover {
   color: #fff;
   box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
   animation: fadeIn 0.4s ease;
-  max-height: 90vh; /* permite rolar se o conteúdo for maior */
+  max-height: 90vh;
   overflow-y: hidden;
 }
 
-.modal-content h2,
-.modal-content h3 {
-  color: #fffdfd;
+.modal-content h2, .modal-content h3 {
+  color: #fff;
   margin-bottom: 10px;
-}
-
-.modal-content ul {
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.modal-content p {
-  margin-top: 10px;
-  line-height: 1.5;
 }
 
 .modal-content button {
@@ -185,7 +202,6 @@ nav li:hover {
   border-radius: 5px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .modal-content button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(229, 9, 20, 0.5);
@@ -200,12 +216,11 @@ nav li:hover {
 }
 
 /* ==============================
-   HISTÓRIA / CONTEÚDO DO LIVRO
+   CONTEÚDO DO LIVRO
 ============================== */
 .livro-com-capa {
   display: flex;
   gap: 20px;
-  flex-direction: row;
   align-items: flex-start;
 }
 
@@ -218,20 +233,6 @@ nav li:hover {
 
 .conteudo-livro {
   flex: 1;
-  overflow: hidden;
-}
-
-.conteudo-livro h2 {
-  margin-top: 0;
-  color: #ffffff;
-}
-
-.conteudo-livro::-webkit-scrollbar-thumb {
-  background: #e50914; /* vermelho Netflix */
-  border-radius: 4px;
-}
-.conteudo-livro::-webkit-scrollbar-track {
-  background: #330000; /* fundo escuro */
 }
 
 .texto-historia {
@@ -241,28 +242,20 @@ nav li:hover {
   padding: 20px;
   line-height: 1.9;
   font-size: 16px;
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   color: #f2f2f2;
-  background-color: black;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.texto-historia p {
-  margin-bottom: 16px;
+  background-color: #000;
 }
 
 .texto-historia::-webkit-scrollbar {
   width: 8px;
 }
-
 .texto-historia::-webkit-scrollbar-thumb {
   background-color: #e50914;
   border-radius: 4px;
 }
-
 .texto-historia::-webkit-scrollbar-track {
-  background: #330000; /* fundo escuro */
+  background: #330000;
 }
 
 /* ==============================
@@ -284,7 +277,6 @@ nav li:hover {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .zoom-controles button:hover {
   background-color: #e50914;
   color: #fff;
@@ -292,25 +284,17 @@ nav li:hover {
 }
 
 /* ==============================
-   EFEITO DE RESPIRO VERMELHO NA CAPA
+   CAPA COM AURA (EFEITO)
 ============================== */
 .capa-com-aura {
   position: relative;
 }
-
 .capa-com-aura img {
   display: block;
   width: 180px;
   border-radius: 12px;
   position: relative;
   z-index: 2;
-}
-
-.capa-com-aura::before {
-  content: "";
-  position: absolute;
-  inset: -8px;
-  border-radius: 16px;
 }
 
 /* ==============================
@@ -327,25 +311,8 @@ footer {
    ANIMAÇÕES
 ============================== */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes respirarVermelho {
-  0%, 100% {
-    box-shadow: 0 0 12px rgba(255, 0, 0, 0.3), 0 0 24px rgba(255, 0, 0, 0.15);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.25);
-    transform: scale(1.01);
-  }
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* ==============================
@@ -360,67 +327,4 @@ footer {
   .texto-historia {
     max-height: 50vh;
   }
-}
-
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-}
-
-/* ==== Itens das seções (como Top 10, romance, etc) ==== */
-.item {
-  position: relative;
-  display: inline-block;
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.item:hover {
-  transform: scale(1.05);
-}
-
-/* ==== Imagens das capas ==== */
-.item img {
-  width: 180px;        /* define o tamanho padrão */
-  height: 260px;       /* mantém proporção similar a uma capa de livro */
-  object-fit: cover;   /* evita distorção */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-}
-
-/* ==== Ranking (os números no canto) ==== */
-.item .rank {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  background-color: #d40000;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.item img {
-  width: 180px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-}
-
-.botoes-laterais {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
 }

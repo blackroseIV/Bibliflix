@@ -1,35 +1,37 @@
-fetch('components/header.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('header-container').innerHTML = html;
-  });
+// ===============================
+// 🧩 CARREGAMENTO DINÂMICO DE COMPONENTES
+// ===============================
 
-fetch('components/top10.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('top10-container').innerHTML = html;
-  });
+// Função genérica para carregar qualquer componente
+function carregarComponente(seletor, caminho, append = false) {
+  fetch(caminho)
+    .then(res => {
+      if (!res.ok) throw new Error(`Erro ao carregar ${caminho}`);
+      return res.text();
+    })
+    .then(html => {
+      const container = document.getElementById(seletor);
+      if (!container) {
+        console.warn(`Container não encontrado: ${seletor}`);
+        return;
+      }
 
-fetch('components/classe-romance.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('romance-container').innerHTML = html;
-  });
+      // append = true → adiciona sem apagar o conteúdo anterior
+      container.innerHTML = append ? container.innerHTML + html : html;
+    })
+    .catch(err => console.error(err));
+}
 
-fetch('components/classe-rpg.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('rpg-container').innerHTML = html;
-  });
+// ===============================
+// 🔹 COMPONENTES PRINCIPAIS
+// ===============================
+carregarComponente('header-container', 'components/header.html');
+carregarComponente('top10-container', 'components/top10.html');
+carregarComponente('romance-container', 'components/classe-romance.html');
+carregarComponente('rpg-container', 'components/classe-rpg.html');
 
-fetch('components/stories/modal-kaelira.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('modal-container').innerHTML = html;
-  });
-
-fetch('components/stories/modal-Nyara-penumbra.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('modal-container').innerHTML += html;
-  });
+// ===============================
+// 📘 MODAIS DAS HISTÓRIAS
+// ===============================
+carregarComponente('modal-container', 'components/stories/modal-kaelira.html');
+carregarComponente('modal-container', 'components/stories/modal-Nyara-penumbra.html', true);

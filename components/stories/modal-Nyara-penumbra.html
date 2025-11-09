@@ -1,7 +1,9 @@
 <div id="modalNyaraPenumbra" class="modal">
   <div class="modal-content livro-com-capa">
-    <span class="fechar" onclick="fecharModal('NyaraPenumbra')">&times;</span> 
-    
+    <!-- Botão de Fechar -->
+    <span class="fechar" onclick="fecharModal('NyaraPenumbra')">&times;</span>
+
+    <!-- Lado Esquerdo: Capa e Controles -->
     <div class="capa-lateral">
       <div class="capa-com-aura">
         <img src="assets/NyaraPenumbra.png" alt="Capa de Nyara Penumbra" />
@@ -12,23 +14,39 @@
         <button onclick="diminuirZoom()">🔍 −</button>
       </div>
 
-      <!-- ✅ Botão movido para dentro da capa-lateral -->
       <div class="botoes-laterais">
         <button onclick="mostrarCapitulo(2)">Ler próximo capítulo</button>
       </div>
     </div>
 
+    <!-- Lado Direito: Conteúdo do Livro -->
     <div class="conteudo-livro">
       <h2>Nyara Penumbra</h2>
 
       <!-- ================= CAPÍTULO 1 ================= -->
-      <h3>📖 Capítulo I: O Eclipse dos Ventos</h3>
-<div class="texto-historia">
-  <p>Nyara nasceu durante o Eclipse dos Ventos, um fenômeno raro em que os céus se tingem de roxo e os espíritos da floresta sussurram aos recém-nascidos. Filha de duas linhagens poderosas — sua mãe, uma sacerdotisa das correntes aéreas, e seu pai, um guerreiro alado exilado — Nyara foi criada entre raízes e nuvens, aprendendo a ouvir o vento antes mesmo de falar.</p>
+      <div class="capitulo" id="capitulo1">
+        <h3>📖 Capítulo I: O Eclipse dos Ventos</h3>
+        <div class="texto-historia">
+          <p>
+            Nyara nasceu durante o Eclipse dos Ventos, um fenômeno raro em que
+            os céus se tingem de roxo e os espíritos da floresta sussurram aos
+            recém-nascidos. Filha de duas linhagens poderosas — sua mãe, uma
+            sacerdotisa das correntes aéreas, e seu pai, um guerreiro alado
+            exilado — Nyara foi criada entre raízes e nuvens, aprendendo a ouvir
+            o vento antes mesmo de falar.
+          </p>
 
-  <p>Desde pequena, ela demonstrava habilidades incomuns: suas penas podiam cortar madeira, seus olhos enxergavam através da mentira, e sua voz, quando cantava, fazia as folhas dançarem. Mas com dons tão raros vinham responsabilidades pesadas. A tribo dos alados a via como uma arma contra o Império de Virell, que avançava pelas florestas com máquinas e magia corrompida.</p>
-</div>
-
+          <p>
+            Desde pequena, ela demonstrava habilidades incomuns: suas penas
+            podiam cortar madeira, seus olhos enxergavam através da mentira, e
+            sua voz, quando cantava, fazia as folhas dançarem. Mas com dons tão
+            raros vinham responsabilidades pesadas. A tribo dos alados a via
+            como uma arma contra o Império de Virell, que avançava pelas
+            florestas com máquinas e magia corrompida.
+          </p>
+        </div>
+      </div>
+      <!-- Fim do Capítulo 1 -->
     </div>
   </div>
 </div>
