@@ -6,21 +6,20 @@
 
 ## ✨ Funcionalidades
 
-- 📖 Catálogo de histórias por gênero (Romance, RPG, Fantasia, etc.)
-- 🖼️ Modais com capa, zoom e capítulos navegáveis
-- 🔍 Controles de zoom para visualização da arte
-- ❤️ Botão de favoritos (em desenvolvimento)
-- 📂 Organização modular com carregamento dinâmico via `fetch()`
-- 🌙 Interface dark com estilo personalizado
+- 📖 Catálogo de histórias por gênero (Romance, RPG, Fantasia, etc.)  
+- 🖼️ Modais com capa, zoom e capítulos navegáveis  
+- 🔍 Controles de zoom para visualização da arte  
+- 📂 Organização modular de CSS e JS com carregamento dinâmico via `fetch()`  
+- 🌙 Interface dark com estilo personalizado  
 
 ---
 
 ## 🚀 Tecnologias utilizadas
 
-- HTML5 + CSS3
-- JavaScript puro (sem frameworks)
-- Visual Studio Code
-- Live Server para desenvolvimento local
+- HTML5 + CSS3 (modular)  
+- JavaScript puro  
+- Visual Studio Code  
+- Live Server para desenvolvimento local  
 
 ---
 
@@ -30,7 +29,24 @@
 bookflix/
 ├── index.html
 ├── css/
-│   └── style.css
+│   ├── style.css
+│   ├── base/
+│   │   ├── reset.css
+│   │   ├── global.css
+│   │   ├── animations.css
+│   │   └── responsive.css
+│   ├── layout/
+│   │   ├── header.css
+│   │   ├── footer.css
+│   │   ├── top10.css
+│   │   └── carrossel.css
+│   ├── components/
+│   │   ├── modal.css
+│   │   ├── livro.css
+│   │   ├── zoom.css
+│   │   └── aura.css
+│   └── themes/
+│       └── kaelira.css
 ├── js/
 │   ├── modal.js
 │   ├── zoom.js
@@ -39,9 +55,9 @@ bookflix/
 ├── components/
 │   ├── header.html
 │   ├── footer.html
-│   ├── stories/
-│   │   ├── modal-Nyara-penumbra.html
-│   │   └── modal-Kealrin-sangue-rubro.html
-├── assets/
-│   ├── Nyara-Penumbra.png
-│   └── Kealrin-Sangue-Rubro.png
+│   └── stories/
+│       ├── modal-Nyara-penumbra.html
+│       └── modal-Kaelrin-sangue-rubro.html
+└── assets/
+    ├── Nyara-Penumbra.png
+    └── Kaelrin-Sangue-Rubro.png
