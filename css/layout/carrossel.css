@@ -1,0 +1,58 @@
+/* ==============================
+   LAYOUT — CARROSSEL DE CATEGORIAS
+============================== */
+
+.carrossel {
+  padding: 20px;
+  background-color: #141414;
+  margin-bottom: 40px;
+}
+
+.carrossel h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== LISTA DE LIVROS ===== */
+.carrossel .livros {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #e50914 #000;
+}
+
+.carrossel .livros::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carrossel .livros::-webkit-scrollbar-thumb {
+  background-color: #e50914;
+  border-radius: 3px;
+}
+
+/* ===== IMAGENS (idêntico ao Top10) ===== */
+.carrossel .livros img {
+  width: 120px;               /* Mesmo tamanho das capas do Top10 */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrossel .livros img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+}
+
+/* ===== DETALHES VISUAIS ===== */
+.carrossel {
+  border-top: 2px solid #e50914;
+  box-shadow: 0 -2px 12px rgba(255, 0, 0, 0.3);
+  border-radius: 8px;
+}
+

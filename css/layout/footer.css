@@ -1,0 +1,11 @@
+/* ==============================
+   LAYOUT — RODAPÉ
+============================== */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  font-size: 14px;
+  color: #fff;
+}

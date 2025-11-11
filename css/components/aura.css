@@ -1,0 +1,15 @@
+/* ==============================
+   COMPONENT — CAPA COM AURA (EFEITO)
+============================== */
+
+.capa-com-aura {
+  position: relative;
+}
+
+.capa-com-aura img {
+  display: block;
+  width: 180px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}

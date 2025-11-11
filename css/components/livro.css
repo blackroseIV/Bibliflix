@@ -1,0 +1,45 @@
+/* ==============================
+   COMPONENT — CONTEÚDO DO LIVRO
+============================== */
+
+.livro-com-capa {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.capa-lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.conteudo-livro {
+  flex: 1;
+}
+
+.texto-historia {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding: 20px;
+  line-height: 1.9;
+  font-size: 16px;
+  font-family: Georgia, serif;
+  color: #f2f2f2;
+  background-color: #000;
+}
+
+.texto-historia::-webkit-scrollbar {
+  width: 8px;
+}
+
+.texto-historia::-webkit-scrollbar-thumb {
+  background-color: #e50914;
+  border-radius: 4px;
+}
+
+.texto-historia::-webkit-scrollbar-track {
+  background: #330000;
+}

@@ -1,0 +1,104 @@
+/* ==============================
+   THEME — KAELIRA SANGUE-RUBRO
+============================== */
+
+.kaelira-theme {
+  background: rgba(10, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  color: #f4f4f4;
+  border: 2px solid #700000;
+  box-shadow: 0 0 40px rgba(200, 0, 0, 0.6);
+  border-radius: 12px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ====== EFEITO NA CAPA ====== */
+.kaelira-theme .capa-com-aura img {
+  transition: transform 0.3s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 20px crimson);
+}
+
+.kaelira-theme .capa-com-aura img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 40px red);
+}
+
+/* ====== ABAS ====== */
+.kaelira-theme .aba {
+  background: #200;
+  color: #eee;
+  border: 1px solid #400;
+  margin-top: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.kaelira-theme .aba:hover {
+  background: #400;
+}
+
+.kaelira-theme .aba.ativa {
+  background: crimson;
+  color: white;
+  font-weight: bold;
+}
+
+.kaelira-theme .aba-conteudo.oculto,
+.kaelira-theme .capitulo.oculto {
+  display: none;
+}
+
+/* ====== BOTÕES DE ZOOM ====== */
+.kaelira-theme .zoom-controles button {
+  margin: 4px;
+  background: #400;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.kaelira-theme .zoom-controles button:hover {
+  background: crimson;
+}
+
+/* ====== REMOVER FUNDO PRETO ====== */
+.kaelira-theme .texto-historia,
+.kaelira-theme .capitulo,
+.kaelira-theme .aba-conteudo,
+.kaelira-theme .conteudo-livro {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.kaelira-theme .texto-historia p {
+  color: #f5f5f5;
+  line-height: 1.7;
+}
+
+/* ====== CONTROLE DE CAPÍTULOS ====== */
+.controle-capitulos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.controle-capitulos button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.controle-capitulos button:hover {
+  background: darkred;
+  transform: scale(1.05);
+}

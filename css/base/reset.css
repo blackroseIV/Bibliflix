@@ -1,0 +1,10 @@
+/* ==============================
+   RESET CSS — v1.5.0
+   Remove espaçamentos e estilos padrão dos navegadores
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

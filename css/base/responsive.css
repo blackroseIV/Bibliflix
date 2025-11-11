@@ -1,0 +1,15 @@
+/* ==============================
+   RESPONSIVIDADE — v1.5.0
+   Ajustes para telas menores
+============================== */
+
+@media (max-width: 768px) {
+  .livro-com-capa {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-historia {
+    max-height: 50vh;
+  }
+}

@@ -1,0 +1,26 @@
+/* ==============================
+   COMPONENT — CONTROLES DE ZOOM
+============================== */
+
+.zoom-controles {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.zoom-controles button {
+  background-color: #000;
+  color: #e50914;
+  border: 1px solid #e50914;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.zoom-controles button:hover {
+  background-color: #e50914;
+  color: #fff;
+  transform: scale(1.05);
+}

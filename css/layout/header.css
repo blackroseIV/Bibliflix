@@ -1,0 +1,50 @@
+/* ==============================
+   LAYOUT — CABEÇALHO / TOPO DO SITE
+============================== */
+
+header,
+.topo-site {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
+}
+
+header h1,
+.logo {
+  color: #e50914;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+nav ul,
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li,
+.menu-principal a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav li:hover,
+.menu-principal a:hover {
+  color: #e50914;
+}
