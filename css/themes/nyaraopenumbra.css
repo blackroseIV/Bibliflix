@@ -1,0 +1,118 @@
+/* ==============================
+   THEME — NYARA PENUMBRA
+============================== */
+
+.nyara-theme {
+  background: rgba(10, 0, 25, 0.6);
+  backdrop-filter: blur(10px);
+  color: #eaeaff;
+  border: 2px solid #4b0082;
+  box-shadow: 0 0 40px rgba(123, 104, 238, 0.6);
+  border-radius: 12px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ====== EFEITO NA CAPA ====== */
+.nyara-theme .capa-com-aura img {
+  transition: transform 0.3s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 20px #9370db);
+}
+
+.nyara-theme .capa-com-aura img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 40px #8a2be2);
+}
+
+/* ====== ABAS ====== */
+.nyara-theme .aba {
+  background: #161038;
+  color: #d8d6ff;
+  border: 1px solid #3b2f80;
+  margin-top: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nyara-theme .aba:hover {
+  background: #2a1e6a;
+}
+
+.nyara-theme .aba.ativa {
+  background: linear-gradient(90deg, #6a5acd, #7b68ee);
+  color: white;
+  font-weight: bold;
+}
+
+/* ====== CONTEÚDO / OCULTOS ====== */
+.nyara-theme .aba-conteudo.oculto,
+.nyara-theme .capitulo.oculto {
+  display: none;
+}
+
+/* ====== BOTÕES DE ZOOM ====== */
+.nyara-theme .zoom-controles button {
+  margin: 4px;
+  background: #2a1e6a;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nyara-theme .zoom-controles button:hover {
+  background: #6a5acd;
+  transform: scale(1.05);
+}
+
+/* ====== REMOVER FUNDOS PADRÕES ====== */
+.nyara-theme .texto-historia,
+.nyara-theme .capitulo,
+.nyara-theme .aba-conteudo,
+.nyara-theme .conteudo-livro {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nyara-theme .texto-historia p {
+  color: #ececff;
+  line-height: 1.7;
+}
+
+/* ====== CONTROLE DE CAPÍTULOS ====== */
+.controle-capitulos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.controle-capitulos button {
+  background: linear-gradient(90deg, #4b0082, #6a5acd);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.controle-capitulos button:hover {
+  background: linear-gradient(90deg, #7b68ee, #8a2be2);
+  transform: scale(1.05);
+}
+
+/* ====== EFEITO AURA ANIMADA ====== */
+@keyframes auraNyara {
+  0% { filter: drop-shadow(0 0 10px #7b68ee); }
+  50% { filter: drop-shadow(0 0 25px #9370db); }
+  100% { filter: drop-shadow(0 0 10px #7b68ee); }
+}
+
+.nyara-theme .capa-com-aura img {
+  animation: auraNyara 3s infinite ease-in-out;
+}

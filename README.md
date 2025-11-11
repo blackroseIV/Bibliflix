@@ -25,7 +25,8 @@
 
 ## 📁 Estrutura do projeto
 
-```plaintext
+## 📁 Estrutura do projeto
+
 bookflix/
 ├── index.html
 ├── css/
@@ -46,7 +47,12 @@ bookflix/
 │   │   ├── zoom.css
 │   │   └── aura.css
 │   └── themes/
+<<<<<<< HEAD
 │       └── kaelira.css
+=======
+│       ├── kaelira.css
+│       └── nyara-penumbra.css
+>>>>>>> d051bab (v1.5.0 — integração completa de Nyara Penumbra e capítulos expandidos)
 ├── js/
 │   ├── modal.js
 │   ├── zoom.js
@@ -57,7 +63,14 @@ bookflix/
 │   ├── footer.html
 │   └── stories/
 │       ├── modal-Nyara-penumbra.html
+<<<<<<< HEAD
 │       └── modal-Kaelrin-sangue-rubro.html
 └── assets/
     ├── Nyara-Penumbra.png
     └── Kaelrin-Sangue-Rubro.png
+=======
+│       └── modal-Kaelira-sangue-rubro.html
+└── assets/
+    ├── Nyara-Penumbra.png
+    └── Kaelira-Sangue-Rubro.png
+>>>>>>> d051bab (v1.5.0 — integração completa de Nyara Penumbra e capítulos expandidos)

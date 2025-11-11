@@ -1,53 +1,154 @@
+<!-- ====================== MODAL NYARA PENUMBRA ====================== -->
 <div id="modalNyaraPenumbra" class="modal">
-  <div class="modal-content livro-com-capa">
+  <div class="modal-content livro-com-capa nyara-theme">
     <!-- Botão de Fechar -->
     <span class="fechar" onclick="fecharModal('NyaraPenumbra')">&times;</span>
 
-    <!-- Lado Esquerdo: Capa e Controles -->
+    <!-- ====================== LADO ESQUERDO ====================== -->
     <div class="capa-lateral">
       <div class="capa-com-aura">
-        <img src="assets/NyaraPenumbra.png" alt="Capa de Nyara Penumbra" />
+        <img id="imgNyaraPenumbra" src="assets/NyaraPenumbra.png" alt="Capa de Nyara Penumbra" />
       </div>
 
-    <div class="zoom-controles">
-      <button onclick="aumentarZoom('NyaraPenumbra')">🔍 +</button>
-      <button onclick="diminuirZoom('NyaraPenumbra')">🔍 −</button>
-    </div>
+      <div class="zoom-controles">
+        <button onclick="aumentarZoom('NyaraPenumbra')">🔍 +</button>
+        <button onclick="diminuirZoom('NyaraPenumbra')">🔍 −</button>
+      </div>
 
-
-      <div class="botoes-laterais">
-        <button onclick="mostrarCapitulo(2)">Ler próximo capítulo</button>
+      <div class="abas">
+        <button class="aba ativa" onclick="mostrarAba('NyaraPenumbra','ficha')">Ficha</button>
+        <button class="aba" onclick="mostrarAba('NyaraPenumbra','livro')">Livro</button>
       </div>
     </div>
 
-    <!-- Lado Direito: Conteúdo do Livro -->
+    <!-- ====================== LADO DIREITO ====================== -->
     <div class="conteudo-livro">
-      <h2>Nyara Penumbra</h2>
 
-      <!-- ================= CAPÍTULO 1 ================= -->
-      <div class="capitulo" id="capitulo1">
-        <h3>📖 Capítulo I: O Eclipse dos Ventos</h3>
+      <!-- ======== ABA: FICHA ======== -->
+      <div class="aba-conteudo" id="NyaraPenumbra-ficha">
+        <h2>🦋 Nyara Penumbra</h2>
         <div class="texto-historia">
           <p>
-            Nyara nasceu durante o Eclipse dos Ventos, um fenômeno raro em que
-            os céus se tingem de roxo e os espíritos da floresta sussurram aos
-            recém-nascidos. Filha de duas linhagens poderosas — sua mãe, uma
-            sacerdotisa das correntes aéreas, e seu pai, um guerreiro alado
-            exilado — Nyara foi criada entre raízes e nuvens, aprendendo a ouvir
-            o vento antes mesmo de falar.
+            Nascida durante o Eclipse dos Ventos, Nyara é uma guerreira alada cuja ligação com o céu e os espíritos a torna um símbolo entre os povos livres das florestas. Metade sacerdotisa, metade caçadora, ela é a ponte entre o vento e a sombra.
           </p>
-
+          <ul>
+            <li><strong>Nome:</strong> Nyara Penumbra</li>
+            <li><strong>Idade:</strong> 22 anos</li>
+            <li><strong>Origem:</strong> Tribos Aladas de Aer'Thalas</li>
+            <li><strong>Ocupação:</strong> Guardiã dos Ventos</li>
+            <li><strong>Habilidade principal:</strong> Canto Etéreo — invoca rajadas espirituais</li>
+            <li><strong>Arma:</strong> Lança-luz “Vórtice”</li>
+          </ul>
           <p>
-            Desde pequena, ela demonstrava habilidades incomuns: suas penas
-            podiam cortar madeira, seus olhos enxergavam através da mentira, e
-            sua voz, quando cantava, fazia as folhas dançarem. Mas com dons tão
-            raros vinham responsabilidades pesadas. A tribo dos alados a via
-            como uma arma contra o Império de Virell, que avançava pelas
-            florestas com máquinas e magia corrompida.
+            Nyara é a última de sua linhagem, portadora de um destino que sopra entre os mundos — aquele que trará equilíbrio entre o céu e a terra.
           </p>
         </div>
       </div>
-      <!-- Fim do Capítulo 1 -->
-    </div>
-  </div>
-</div>
+
+      <!-- ======== ABA: LIVRO ======== -->
+      <div class="aba-conteudo oculto" id="NyaraPenumbra-livro">
+        <h2>📖 Livro: Nyara — Penumbra dos Ventos</h2>
+
+        <!-- ================= CAPÍTULO I ================= -->
+        <div class="capitulo" id="NyaraPenumbra-capitulo1">
+          <h3>📖 Capítulo I: O Eclipse dos Ventos</h3>
+          <div class="texto-historia">
+            <p>
+              Nyara nasceu durante o <strong>Eclipse dos Ventos</strong>, um fenômeno raro em que os céus se tingem de roxo e os espíritos da floresta sussurram aos recém-nascidos. Filha de duas linhagens poderosas — sua mãe, uma sacerdotisa das correntes aéreas, e seu pai, um guerreiro alado exilado — Nyara foi criada entre raízes e nuvens, aprendendo a ouvir o vento antes mesmo de falar.
+            </p>
+            <p>
+              Desde pequena, ela demonstrava habilidades incomuns: suas penas podiam cortar madeira, seus olhos enxergavam através da mentira, e sua voz, quando cantava, fazia as folhas dançarem. Mas com dons tão raros vinham responsabilidades pesadas. A tribo dos alados a via como uma arma contra o <strong>Império de Virell</strong>, que avançava pelas florestas com máquinas e magia corrompida.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO II ================= -->
+        <div class="capitulo oculto" id="NyaraPenumbra-capitulo2">
+          <h3>📖 Capítulo II: A Rebelião Silenciosa</h3>
+          <div class="texto-historia">
+            <p>
+              Aos 17 anos, Nyara abandonou os rituais e as tradições. Ela não queria ser símbolo, queria ser ação. Formou um pequeno grupo de rebeldes — alados, humanos renegados, criaturas da floresta — e começou a sabotar postos imperiais, libertar prisioneiros e destruir torres de extração mágica.
+            </p>
+            <p>
+              Foi durante uma dessas missões que ela conheceu <strong>Rakan</strong>, um emissário de paz enviado por uma facção humana que acreditava na coexistência. Ele era tudo que Nyara desprezava: otimista, impulsivo, encantador. Mas também era tudo que ela precisava: alguém que via além da guerra, que enxergava nela mais do que uma arma.
+            </p>
+            <p>
+              Eles se apaixonaram como tempestade: rápida, intensa, impossível de ignorar.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO III ================= -->
+        <div class="capitulo oculto" id="NyaraPenumbra-capitulo3">
+          <h3>📖 Capítulo III: Asas Entrelaçadas</h3>
+          <div class="texto-historia">
+            <p>
+              Juntos, Nyara e Rakan criaram uma rede de resistência chamada <strong>Asas da Aurora</strong>. Uniram tribos esquecidas, convenceram cidades escondidas, e até converteram soldados imperiais. A cada vitória, o vínculo entre eles se fortalecia. Nyara, que nunca acreditou no amor, começou a escrever canções para ele. Rakan, que nunca acreditou na guerra, aprendeu a lutar por ela.
+            </p>
+            <p>
+              Mas a paz tem inimigos. Durante uma emboscada, Rakan foi capturado por inquisidores imperiais. Nyara tentou salvá-lo, mas foi tarde demais. A última coisa que viu foi o bracelete que ele usava — feito de raízes vivas e cristal de vento — caindo no chão enquanto ele era levado.
+            </p>
+            <p>
+              O Império declarou Rakan morto. <strong>Nyara nunca acreditou.</strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO IV ================= -->
+        <div class="capitulo oculto" id="NyaraPenumbra-capitulo4">
+          <h3>📖 Capítulo IV: A Caçada dos Ventos</h3>
+          <div class="texto-historia">
+            <p>
+              Desde então, Nyara vaga entre reinos, guiada por rumores e correntes de ar. Dizem que um prisioneiro alado foi visto nas montanhas de <strong>Tharion</strong>. Que um homem com olhos dourados canta canções proibidas nas tavernas de <strong>Elenor</strong>. Que um bracelete de raízes vivas foi encontrado em ruínas imperiais.
+            </p>
+            <p>
+              Ela segue cada pista, cada sussurro, cada vento. Mas a jornada a mudou. Nyara tornou-se mais feroz, mais solitária. Suas penas agora cortam como lâminas. Sua voz, antes doce, agora carrega dor. Ela destrói tudo que ameaça o equilíbrio natural — e tudo que impede sua busca.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO V ================= -->
+        <div class="capitulo oculto" id="NyaraPenumbra-capitulo5">
+          <h3>📖 Capítulo V: O Canto da Alma</h3>
+          <div class="texto-historia">
+            <p>
+              Em uma noite de lua dupla, Nyara encontra um templo antigo, onde os ventos não sopram há séculos. Lá, ela realiza o <strong>Canto da Alma</strong>, um ritual proibido que conecta corações distantes. Ao cantar, sente uma presença responder. Fraca, distante, mas viva.
+            </p>
+            <p>
+              <strong>Rakan está vivo.</strong> Mas o ritual também alerta o império. Caçadores de almas, magos corruptos e soldados alados são enviados para capturá-la. Nyara foge, luta, sangra — mas não para. Cada batalha é uma nota em sua canção. Cada vitória, um passo em direção ao reencontro.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO VI ================= -->
+        <div class="capitulo oculto" id="NyaraPenumbra-capitulo6">
+          <h3>📖 Capítulo VI: O Reencontro</h3>
+          <div class="texto-historia">
+            <p>
+              Finalmente, nas ruínas de <strong>Lysaria</strong>, Nyara encontra Rakan. Ele está ferido, marcado, mas seus olhos ainda brilham. Eles se abraçam como se o tempo não existisse. Mas o império os cerca. A última batalha começa.
+            </p>
+            <p>
+              Juntos, eles lutam como um só. As penas de Nyara e os encantos de Rakan se entrelaçam em uma dança de luz e sombra. O império cai. A floresta respira. E o amor, finalmente, vence.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= EPÍLOGO ================= -->
+        <div class="capitulo oculto" id="NyaraPenumbra-epilogo">
+          <h3>📖 Epílogo: Asas Livres</h3>
+          <div class="texto-historia">
+            <p>
+              Nyara e Rakan não voltam para a tribo. Eles criam um novo lar, entre raízes e nuvens, onde alados e humanos vivem em harmonia. Ela ainda carrega suas penas. Ele ainda canta suas canções. Mas agora, cada dia é uma escolha — não entre guerra e paz, mas entre liberdade e amor.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CONTROLE DE CAPÍTULOS ================= -->
+        <div class="controle-capitulos">
+          <button onclick="mudarCapitulo('NyaraPenumbra', -1)">⬅️ Anterior</button>
+          <button onclick="mudarCapitulo('NyaraPenumbra', 1)">Próximo ➡️</button>
+        </div>
+      </div> <!-- Fim da aba livro -->
+    </div> <!-- Fim do conteúdo-livro -->
+  </div> <!-- Fim do modal-content -->
+</div> <!-- Fim do modal -->
