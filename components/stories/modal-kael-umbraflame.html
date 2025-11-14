@@ -1,0 +1,178 @@
+<!-- ====================== MODAL KAEL UMBRAFLAME ====================== -->
+<div id="modalKaelUmbraflame" class="modal">
+  <div class="modal-content livro-com-capa kaelumbra-theme">
+    
+    <!-- Botão de Fechar -->
+    <span class="fechar" onclick="fecharModal('KaelUmbraflame')">&times;</span>
+
+    <!-- ====================== LADO ESQUERDO ====================== -->
+    <div class="capa-lateral">
+
+      <div class="capa-com-aura">
+        <img id="imgKaelUmbraflame" src="assets/KaelUmbraflame.png" alt="Capa de Kael Umbraflame" />
+      </div>
+
+      <div class="zoom-controles">
+        <button onclick="aumentarZoom('KaelUmbraflame')">🔍 +</button>
+        <button onclick="diminuirZoom('KaelUmbraflame')">🔍 −</button>
+      </div>
+
+      <div class="abas">
+        <button class="aba ativa" onclick="mostrarAba('KaelUmbraflame','ficha')">Ficha</button>
+        <button class="aba" onclick="mostrarAba('KaelUmbraflame','livro')">Livro</button>
+      </div>
+
+    </div>
+
+    <!-- ====================== LADO DIREITO ====================== -->
+    <div class="conteudo-livro">
+
+      <!-- ======== ABA: FICHA ======== -->
+      <div class="aba-conteudo" id="KaelUmbraflame-ficha">
+
+        <h2>🦉 Kael Umbraflame</h2>
+
+        <div class="texto-historia">
+
+          <ul>
+            <li><strong>Raça:</strong> Incantado Sombrio (fae corrompido)</li>
+            <li><strong>Profissão:</strong> Arauto do Lamento e Espelho das Almas</li>
+            <li><strong>Alinhamento Emocional:</strong> Entre o amor perdido e a loucura</li>
+            <li><strong>Idade:</strong> Desconhecida (aparenta 28)</li>
+            <li><strong>Origem:</strong> Espelhos de Virellen, agora um reino amaldiçoado</li>
+          </ul>
+
+          <h3>🧠 Personalidade</h3>
+          <ul>
+            <li>Encantador, errático e perigosamente apaixonado</li>
+            <li>Oscila entre ternura e fúria como um sussurro no escuro</li>
+            <li>Vive entre a esperança e o abismo da perda</li>
+          </ul>
+
+          <h3>🧥 Aparência</h3>
+          <ul>
+            <li>Cabelos negros com mechas carmesim que flutuam como se submersos</li>
+            <li>Olhos de âmbar rachado, prestes a estilhaçar</li>
+            <li>Veste véus rasgados e penas vivas que respiram ao seu redor</li>
+          </ul>
+
+          <h3>🪶 Habilidades Emocionais</h3>
+          <ul>
+            <li><strong>Eco do Amor Perdido:</strong> Invoca memórias distorcidas que torturam emocionalmente.</li>
+            <li><strong>Rasgo do Véu:</strong> Abre fendas para sombras famintas.</li>
+            <li><strong>Dança do Lamento:</strong> Enfeitiça observadores levando-os à loucura ou êxtase.</li>
+            <li><strong>Espelho de Sangue:</strong> Reflete dano ao agressor, sacrificando a própria sanidade.</li>
+          </ul>
+
+          <h3>🎒 Objetos Pessoais</h3>
+          <ul>
+            <li><strong>Fragmento de Lira:</strong> Só emite som quando Kael chora.</li>
+            <li><strong>Máscara de Virellen:</strong> Revela o verdadeiro rosto de quem a encara — e os devora.</li>
+            <li><strong>Pena de Nyara:</strong> Relíquia que vibra quando ela está próxima.</li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- ======== ABA: LIVRO ======== -->
+      <div class="aba-conteudo oculto" id="KaelUmbraflame-livro">
+
+        <h2>📖 Livro: Kael Umbraflame — Espelho do Lamento</h2>
+
+        <!-- ================= CAPÍTULO 1 ================= -->
+        <div class="capitulo" id="KaelUmbraflame-capitulo-1">
+          <h3>I. O Espelho Estilhaçado</h3>
+          <div class="texto-historia">
+            <p>
+              Kael nasceu no reflexo de um mundo que já não existe. Virellen era música, luz e dança.  
+              Mas um pacto proibido quebrou seu destino — e o reino com ele.  
+              O jovem fae sobreviveu, mas sua alma não.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 2 ================= -->
+        <div class="capitulo oculto" id="KaelUmbraflame-capitulo-2">
+          <h3>II. A Canção Proibida</h3>
+          <div class="texto-historia">
+            <p>
+              Kael vagou entre reinos, cantando melodias que ninguém deveria ouvir.  
+              Seus cânticos despertavam mortos, enlouqueciam reis e roubavam crianças para o mundo dos espelhos.  
+              Mas ele só queria reencontrar Nyara — a única que o viu antes da corrupção.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 3 ================= -->
+        <div class="capitulo oculto" id="KaelUmbraflame-capitulo-3">
+          <h3>III. O Culto do Véu</h3>
+          <div class="texto-historia">
+            <p>
+              Os sobreviventes de sua música formaram o Culto do Véu.  
+              Eles o seguiram como um profeta capaz de romper a realidade.  
+              Kael os guiou, mas seu coração estava preso a uma memória que doía mais que qualquer maldição.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 4 ================= -->
+        <div class="capitulo oculto" id="KaelUmbraflame-capitulo-4">
+          <h3>IV. O Encontro com o Espelho</h3>
+          <div class="texto-historia">
+            <p>
+              Em uma catedral abandonada, Kael encontrou um espelho que sussurrava com a voz de Nyara.  
+              Ele viu sua versão corrompida — fria, vazia, cruel.  
+              Ele quebrou o espelho, mas a imagem continuou a persegui-lo.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 5 ================= -->
+        <div class="capitulo oculto" id="KaelUmbraflame-capitulo-5">
+          <h3>V. O Último Lamento</h3>
+          <div class="texto-historia">
+            <p>
+              Kael prepara o Cântico do Fim — capaz de salvar o mundo ou destruí-lo.  
+              Para completá-lo, precisa da última nota: a voz de Nyara.  
+              Mas cada passo em direção a ela o leva mais perto da loucura.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= CAPÍTULO 6 ================= -->
+        <div class="capitulo oculto" id="KaelUmbraflame-capitulo-6">
+          <h3>VI. O Abraço da Loucura</h3>
+          <div class="texto-historia">
+            <p>
+              Eles se reencontram. Mas nenhum é mais quem foi um dia.  
+              A dança final é feita de sombras, fogo e lágrimas.  
+              A canção termina. O mundo treme.  
+              E então — silêncio.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= EPÍLOGO ================= -->
+        <div class="capitulo oculto" id="KaelUmbraflame-epilogo">
+          <h3>Epílogo: O Véu e a Pena</h3>
+          <div class="texto-historia">
+            <p>
+              Dizem que em noites sem lua, uma melodia ecoa entre espelhos rachados.  
+              Uma pena negra cai antes de tragédias.  
+              Dois vultos dançam entre ruínas — amor e horror trançados para sempre.  
+            </p>
+          </div>
+        </div>
+
+        <!-- ======== CONTROLES DE CAPÍTULOS ======== -->
+        <div class="controle-capitulos">
+          <button class="btn-anterior" onclick="mudarCapitulo('KaelUmbraflame', -1)">⬅️ Anterior</button>
+          <button class="btn-proximo" onclick="mudarCapitulo('KaelUmbraflame', 1)">Próximo ➡️</button>
+        </div>
+
+      </div> <!-- fim aba livro -->
+
+    </div> <!-- fim conteudo-livro -->
+
+  </div> <!-- fim modal-content -->
+</div> <!-- fim modal -->

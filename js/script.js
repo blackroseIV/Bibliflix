@@ -35,6 +35,7 @@ carregarComponente("header-container", "components/header.html");
 carregarComponente("top10-container", "components/top10.html");
 carregarComponente("romance-container", "components/classe-romance.html");
 carregarComponente("rpg-container", "components/classe-rpg.html");
+carregarComponente("terror-container", "components/classe-terror.html");
 
 // ===============================
 // 📘 MODAIS DAS HISTÓRIAS
